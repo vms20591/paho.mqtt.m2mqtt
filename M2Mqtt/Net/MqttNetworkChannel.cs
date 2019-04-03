@@ -26,6 +26,10 @@ using System.Net.Sockets;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System;
+#if (NET_CORE_2_1)
+using System.Net.Security;
+using System.Security.Authentication;
+#endif
 
 namespace uPLibrary.Networking.M2Mqtt
 {

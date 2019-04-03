@@ -52,6 +52,10 @@ using System.Collections;
 using MqttUtility = uPLibrary.Networking.M2Mqtt.Utility;
 using System.IO;
 
+#if (NET_CORE_2_1)
+using System.Net.Security;
+#endif
+
 namespace uPLibrary.Networking.M2Mqtt
 {
     /// <summary>

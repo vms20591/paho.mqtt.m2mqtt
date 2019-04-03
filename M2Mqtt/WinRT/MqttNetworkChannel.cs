@@ -19,14 +19,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if !(NET_CORE_2_1)
 using Windows.Networking;
 using Windows.Networking.Sockets;
+#endif
 using System.Runtime.InteropServices.WindowsRuntime;
+#if !(NET_CORE_2_1)
 using Windows.Storage.Streams;
+#endif
 using System.Threading;
 
 namespace uPLibrary.Networking.M2Mqtt
 {
+    #if !(NET_CORE_2_1)
     public class MqttNetworkChannel : IMqttNetworkChannel
     {
         // stream socket for communication
@@ -176,4 +181,5 @@ namespace uPLibrary.Networking.M2Mqtt
             }
         }
     }
+    #endif
 }

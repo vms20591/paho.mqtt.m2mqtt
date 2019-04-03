@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 
 namespace uPLibrary.Networking.M2Mqtt
 {
+    #if !(NET_CORE_2_1)
     /// <summary>
     /// Support methods fos specific framework
     /// </summary>
@@ -33,4 +34,5 @@ namespace uPLibrary.Networking.M2Mqtt
 
         public static void SleepThread(int millisecondsTimeout) { Task.Delay(millisecondsTimeout).RunSynchronously(); }
     }
+    #endif
 }

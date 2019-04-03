@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>M2Mqtt</AssemblyName>
+    <DefineConstants>NET_CORE_2_1</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="..\M2Mqtt\obj\**\*;..\M2Mqtt\Properties\AssemblyInfo.cs" />
+    <Compile Include="..\M2Mqtt\**\*.cs" Exclude="..\M2Mqtt\obj\**\*;bin\**;obj\**;**\*.xproj;packages\**;..\M2Mqtt\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>
